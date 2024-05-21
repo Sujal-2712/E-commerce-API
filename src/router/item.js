@@ -6,7 +6,9 @@ const { handleGetAllItems, handleGetItemByID, handleCreateNewItem, handleUpdateI
 
 const router = new express.Router();
 
-router.get('/', sayHello);
+router.get('/', (req,res)=>{
+  console.log("Home Page");
+});
 
 router.get('/api/items', handleGetAllItems);
 
