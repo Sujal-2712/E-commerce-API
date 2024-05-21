@@ -6,9 +6,7 @@ const addData = async (data) => {
     const user = await item.insertMany(data);
     return user;
 }
-function sayHello (req, res)  {
-    res.send("Hello");
-}
+
 async function handleGetAllItems(req, res) {
     try {
         const data = await item.find();
@@ -76,4 +74,4 @@ async function handleDeleteItemByID (req,res){
         console.log(error);
     }
 }
-module.exports={handleGetAllItems,handleGetItemByID,handleCreateNewItem,handleUpdateItemByID,handleDeleteItemByID,sayHello};
+module.exports={handleGetAllItems,handleGetItemByID,handleCreateNewItem,handleUpdateItemByID,handleDeleteItemByID};
